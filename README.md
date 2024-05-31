@@ -30,7 +30,9 @@ Atualmente, o Linux é amplamente utilizado em servidores web, infraestrutura de
 
 **Hardware**: A camada mais baixa é o hardware físico do computador, incluindo processador, memória, dispositivos de armazenamento e periféricos.
 
-**![Estrutura hierárquica e funcional](https://lh7-us.googleusercontent.com/N_1zKviFnS_-iEoMoG2wWJZfH14Vsh3Zo1F7PUBhXSWzeDQKWQwGT33b7W3iEk-zXgx3sFMuRoz3dJarMh_0u_SIjA1YQlx63PglZsfoYvtaZKwQTVRZpI-Y4L0wJo1DKvSwt4JtHU7iScSkPvJ7_Ck){ width=50% }**
+
+<img src="https://lh7-us.googleusercontent.com/N_1zKviFnS_-iEoMoG2wWJZfH14Vsh3Zo1F7PUBhXSWzeDQKWQwGT33b7W3iEk-zXgx3sFMuRoz3dJarMh_0u_SIjA1YQlx63PglZsfoYvtaZKwQTVRZpI-Y4L0wJo1DKvSwt4JtHU7iScSkPvJ7_Ck" width="300" height="300" alt="Camadas Sistema Operacional"/>
+
 
 Essas camadas formam uma pilha de software que permite aos usuários interagir com o hardware de maneira eficiente e realizar uma variedade de tarefas computacionais.
 
@@ -51,6 +53,7 @@ Para começar, vamos garantir que tenhamos todo o software necessário instalado
 	- 20Gb Disco
 	
 Link para download da ISO Debian https://www.debian.org/CD/http-ftp/
+
 Link para site Oficial: https://www.debian.org/
 
 
@@ -75,8 +78,6 @@ Link para download da ISO CentOS https://mirror.uepg.br/centos/7.9.2009/isos/x86
 
 Durante a instalação de cada sistema operacional, sigam as instruções na tela para configurar as opções de idioma, localização e configurações de rede conforme necessário. Certifiquem-se de definir uma senha forte para o usuário root e criar uma conta de usuário padrão, se solicitado.
 
-
-
 ## Configurando o Linux
 
 ### Debian
@@ -94,8 +95,6 @@ APT é um conjunto de ferramentas, e algumas das mais comuns incluem:
 `apt-cache`: Ferramenta para buscar e exibir informações sobre pacotes disponíveis.
 
 `dpkg`: O sistema de gerenciamento de pacotes de baixo nível utilizado pelo APT para manipular pacotes .deb.
-
-
 
 ## Navegação em Diretórios no Linux
 
