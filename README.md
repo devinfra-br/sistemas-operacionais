@@ -30,12 +30,12 @@ Atualmente, o Linux é amplamente utilizado em servidores web, infraestrutura de
 
 **Hardware**: A camada mais baixa é o hardware físico do computador, incluindo processador, memória, dispositivos de armazenamento e periféricos.
 
-**![Estrutura hierárquica e funcional](https://lh7-us.googleusercontent.com/N_1zKviFnS_-iEoMoG2wWJZfH14Vsh3Zo1F7PUBhXSWzeDQKWQwGT33b7W3iEk-zXgx3sFMuRoz3dJarMh_0u_SIjA1YQlx63PglZsfoYvtaZKwQTVRZpI-Y4L0wJo1DKvSwt4JtHU7iScSkPvJ7_Ck)**
+**![Estrutura hierárquica e funcional](https://lh7-us.googleusercontent.com/N_1zKviFnS_-iEoMoG2wWJZfH14Vsh3Zo1F7PUBhXSWzeDQKWQwGT33b7W3iEk-zXgx3sFMuRoz3dJarMh_0u_SIjA1YQlx63PglZsfoYvtaZKwQTVRZpI-Y4L0wJo1DKvSwt4JtHU7iScSkPvJ7_Ck){ width=50% }**
 
 Essas camadas formam uma pilha de software que permite aos usuários interagir com o hardware de maneira eficiente e realizar uma variedade de tarefas computacionais.
 
 
-## Laboratório pratico
+## Laboratório prático
 
 ### Instalação de Sistemas Operacionais Linux em Máquinas Virtuais (HyperV ou VmBox)
 
