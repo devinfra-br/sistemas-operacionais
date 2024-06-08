@@ -123,9 +123,11 @@ $ cat nome_do_arquivo
 **Opções comuns:**
 
 - `-r`: Copia recursivamente diretórios e seu conteúdo.
+
 	```sh
 	$ cp -r [diretorio_origem] [diretorio_destino]
 	```
+    
 ### Comando `mv`
 
 O comando `mv` é utilizado para mover arquivos e diretórios de um local para outro. Ele também pode ser usado para renomear arquivos.
