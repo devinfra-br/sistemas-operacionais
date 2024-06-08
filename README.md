@@ -73,102 +73,29 @@ O desenvolvedor e criador do debian é Ian Murdock (28 de abril de 1973 – 28 d
 Link para download da ISO CentOS https://mirror.uepg.br/centos/7.9.2009/isos/x86_64/
 
 **Curiosidades**
-> CentOS, abreviação de Community ENTerprise Operating System, é uma distribuição Linux de classe corporativa derivada de códigos fonte gratuitamente distribuídos pela Red Hat Enterprise Linux e mantida pelo CentOS Project.
+CentOS, abreviação de Community ENTerprise Operating System, é uma distribuição Linux de classe corporativa derivada de códigos fonte gratuitamente distribuídos pela Red Hat Enterprise Linux e mantida pelo CentOS Project.
 
 
-Durante a instalação de cada sistema operacional, sigam as instruções na tela para configurar as opções de idioma, localização e configurações de rede conforme necessário. Certifiquem-se de definir uma senha forte para o usuário root e criar uma conta de usuário padrão, se solicitado.
+> Durante a instalação de cada sistema operacional, sigam as instruções na tela para configurar as opções de idioma, localização e configurações de rede conforme necessário. Certifiquem-se de definir uma senha forte para o usuário root e criar uma conta de usuário padrão, se solicitado.
 
-## Configurando o Linux
 
-### Debian
+## Diretórios e Arquivos - Aula 2
 
-O instalador de pacotes do Debian é conhecido como APT (Advanced Package Tool). APT é um sistema de gerenciamento de pacotes que facilita a instalação, atualização e remoção de software em distribuições baseadas em Debian.
+### Estrutura de pastas 
 
-**Ferramentas Associadas ao APT**
+A estrutura de diretórios no Linux é organizada em uma hierarquia em forma de árvore, com o diretório raiz `/` no topo. Aqui estão alguns dos diretórios mais importantes e suas funções:
 
-APT é um conjunto de ferramentas, e algumas das mais comuns incluem:
+-   `/bin`: Contém binários essenciais para todos os usuários, como comandos básicos do sistema.
+-   `/sbin`: Contém binários essenciais para o sistema e administração.
+-   `/etc`: Contém arquivos de configuração do sistema.
+-   `/home`: Contém os diretórios home dos usuários.
+-   `/var`: Contém arquivos de variáveis, como logs, emails, e bancos de dados.
+-   `/usr`: Contém aplicativos e arquivos do usuário.
+-   `/tmp`: Diretório para arquivos temporários.
 
-`apt-get`: Uma interface de linha de comando para a APT que permite instalar, remover e atualizar pacotes.
-
-`apt`: Uma interface mais recente que combina várias funcionalidades de apt-get e apt-cache, oferecendo uma experiência mais fácil de usar.
-
-`apt-cache`: Ferramenta para buscar e exibir informações sobre pacotes disponíveis.
-
-`dpkg`: O sistema de gerenciamento de pacotes de baixo nível utilizado pelo APT para manipular pacotes .deb.
-
-## Navegação em Diretórios no Linux
+### Navegação em Diretórios no Linux
 
 Manipular e navegar em diretórios no Linux é uma tarefa essencial que pode ser realizada usando vários comandos de terminal. Aqui estão alguns dos comandos mais comuns para essa finalidade:
-
-### Comandos de Navegação
-
-1.  **`pwd` (Mostra o caminho completo do diretório atual.)**:
-    
-	```
-	$ pwd 
-	```    
-2.  **`cd` ( Muda para outro diretório)**:
-    
-	```
-	$ cd /caminho/para/diretorio
-	```  
-    
-3.  **`ls` (Lista o conteúdo do diretório atua)**:
-	```
-	$ ls
-	```  
-    
-	Lista o conteúdo com detalhes adicionais.
-	```
-	$ ls -l
-	```  
-	Lista arquivos e diretórios ocultos (aqueles começando com `.`).  
-	```
-	$ ls -a
-	```  
-
-### Comandos de Manipulação de Diretórios
-
-4.  **`mkdir` ( Cria um novo diretório)**:
-    
-	```
-	$ mkdir nome_do_diretorio
-	``` 
-    
-      Cria um novo diretório e qualquer diretório pai necessário.
-	```
-	$ mkdir -p caminho/para/novo_diretorio
-	``` 
-	   
-5.  **`rmdir` (Remove diretórios)**:
-    
-	```
-	$ rmdir nome_do_diretorio
-	```
-   
-6.  **`rm` (Remove um diretório e seu conteúdo)**:
-    
-	```
-	$ rm -r nome_do_diretorio
-	```  
-    
-7.  **`cp` (Copia um arquivo para outro local)**:
-
-	```
-	$ cp arquivo_origem arquivo_destino
-	```  
-    
-      Copia um diretório e todo o seu conteúdo para outro local.
-    
-	```
-	$ cp -r diretorio_origem diretorio_destino
-	```  
-    
-8.  **`mv` (Move ou renomeia um arquivo ou diretório)**:
-    
-	```
-	$ mv arquivo_ou_diretorio_origem arquivo_ou_diretorio_destino
-	```  
 
 ### Estrutura de diretórios
 A estrutura de diretórios do Debian (e de outras distribuições Linux baseadas em Unix) é organizada de forma hierárquica e segue o Filesystem Hierarchy Standard (FHS). Aqui está uma visão geral das principais pastas e suas finalidades:
@@ -209,3 +136,43 @@ Contém arquivos variáveis, como logs do sistema, filas de impressão, e-mails,
 /var/spool
 ```
 
+## Prática com Comandos
+
+[Acesse aqui a lista de comandos linux com explicações](COMMANDS.md)
+
+
+### Exercício 1: Liste todos os diretórios no nível raiz (`/`)
+
+1. **Abrir o terminal.**
+2. **Listar todos os diretórios no nível raiz:**
+    ```sh
+    ls -l /
+    ```
+    - **Explicação do comando:** 
+      - `ls` é o comando para listar arquivos e diretórios.
+      - `-l` é a opção para listar com detalhes, mostrando permissões, proprietário, tamanho e data de modificação.
+      - `/` especifica o diretório raiz.
+
+3. **Filtrar apenas os diretórios:**
+    ```sh
+    ls -l / | grep ^d
+    ```
+    - **Explicação do comando:**
+      - `grep ^d` filtra a saída do `ls -l` para mostrar apenas linhas que começam com `d`, que indica diretórios.
+
+### Exercício 2: Navegue até o diretório `/usr` e liste os seus conteúdos
+
+1. **Navegar até o diretório `/usr`:**
+    ```sh
+    cd /usr
+    ```
+    - **Explicação do comando:**
+      - `cd` é o comando para mudar de diretório.
+      - `/usr` é o caminho do diretório para onde queremos navegar.
+
+2. **Listar os conteúdos do diretório `/usr`:**
+    ```sh
+    ls -l
+    ```
+    - **Explicação do comando:**
+      - `ls -l` lista os conteúdos do diretório atual com detalhes.
