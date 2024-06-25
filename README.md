@@ -1,7 +1,7 @@
 # Sistemas Operacionais Linux
 
 #### Curso em Vídeo no canal @devinfra youtube
-[Playlist todos os vídeos](#https://youtube.com/playlist?list=PLlgkGhDIUMt7fiztc1Ytg2sUBkr7GH5eP&si=L_Y5lscxxngsmzkw)
+[![Devinfra Canal](https://cdn-icons-png.flaticon.com/256/1384/1384060.png)](https://youtube.com/playlist?list=PLlgkGhDIUMt7fiztc1Ytg2sUBkr7GH5eP&si=L_Y5lscxxngsmzkw)
 
 ### Índice
 1. [Introdução](#intro)
