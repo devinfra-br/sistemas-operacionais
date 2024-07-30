@@ -947,13 +947,10 @@ Uma rede que abrange uma grande área geográfica, como um país ou continente.
 
 -   **Espaço de Endereçamento**: Oferece cerca de  **4,3 bilhões**  de endereços únicos.
 
--   **Características**:
-
-       -   **Sem conexão**: Não garante a entrega dos dados nem a qualidade do serviço.
-        
-        -   **Roteamento**: Pode enviar pacotes por caminhos alternativos em caso de congestão ou falhas.
-
-		-   **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
+- **Características**:
+	- **Sem conexão**: Não garante a entrega dos dados nem a qualidade do serviço.  
+	- **Roteamento**: Pode enviar pacotes por caminhos alternativos em caso de congestão ou falhas.
+	- **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
 
 **IPv6 (Internet Protocol versão 6)**:
     
