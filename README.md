@@ -936,25 +936,32 @@ Permitem a comunicação entre diferentes dispositivos para compartilhar recurso
 
 **IPv4 (Internet Protocol versão 4)**:
     
--   **Formato**: O IPv4 usa um endereço de  **32 bits**  no formato decimal com pontos (por exemplo, 192.168.1.1).
+-   **Formato**: Um endereço IPv4 é representado por um número de 32 bits, que é dividido em quatro octetos (ou bytes). Cada octeto é composto por 8 bits, e cada um dos quatro octetos é representado em decimal separado por pontos. Portanto, um endereço IPv4 tem o seguinte formato: **192.168.1.1**).
+> Onde cada conjunto separado por `.` é um número decimal entre 0 e 255, que representa um octeto.
+> Esses 32 bits são divididos em quatro octetos (bytes), cada um contendo 8 bits.
+> Cada octeto é convertido em um número decimal entre 0 e 255.
+
 -   **Espaço de Endereçamento**: Oferece cerca de  **4,3 bilhões**  de endereços únicos.
 
 -   **Características**:
        -   **Sem conexão**: Não garante a entrega dos dados nem a qualidade do serviço.
+       
         -   **Roteamento**: Pode enviar pacotes por caminhos alternativos em caso de congestão ou falhas.
+
         -   **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
 
 **IPv6 (Internet Protocol versão 6)**:
     
--   **Formato**: Usa um endereço de  **128 bits**  no formato hexadecimal (por exemplo, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+-   **Formato**: Um endereço IPv6 é representado por um número de 128 bits, que é dividido em oito blocos de 16 bits. Cada bloco é representado em hexadecimal e separado por dois pontos (`:`). Portanto, um endereço IPv6 tem o seguinte formato: **2001:0db8:85a3:0000:0000:8a2e:0370:7334**).
+> Onde cada `xxxx` é um número hexadecimal de 16 bits (4 dígitos hexadecimais).
 
 -   **Espaço de Endereçamento**: Oferece  **1,028 vezes mais**  endereços que o IPv4.
 -   **Características**:
     -   **Conexão**: Garante a entrega dos dados.
+
     -   **Segurança**: Incorpora recursos de segurança.
+
     -   **Futuro**: Solução para o esgotamento de endereços.
-
-
 
 ### Modelo OSI e TCP/IP
 
