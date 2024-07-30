@@ -17,7 +17,7 @@
 15. [useradd](#useradd)  
 16. [groupadd](#groupadd)  
 17. [wc](#wc)  
-
+18. [ip](#wc)  
 
 
 <div id='man'/>
@@ -509,3 +509,75 @@ Onde:
 -   `exemplo.txt` é o nome do arquivo analisado.
 
 > O comando `wc` é uma ferramenta simples, mas poderosa, para realizar contagens rápidas de palavras, linhas e bytes em arquivos de texto no Linux. É amplamente utilizado em scripts de automação, análise de logs e processamento de dados onde a contagem precisa de informações é necessária.
+
+<div id='ip'/>
+
+### Comando `ip`
+O comando `ip` no Linux é uma ferramenta poderosa usada para configurar e monitorar interfaces de rede, endereços IP e roteamento. Este roteiro fornece uma introdução prática ao uso do comando `ip` e suas opções mais comuns.
+
+#### Sintaxe básica:
+
+```bash
+ip [OPTIONS] OBJECT COMMAND
+```
+-   **OPTIONS**: Opções adicionais (por exemplo, `-4` para IPv4 ou `-6` para IPv6)
+-   **OBJECT**: Tipo de objeto a ser manipulado (por exemplo, `link`, `addr`, `route`)
+-   **COMMAND**: Ação a ser executada (por exemplo, `show`, `add`, `del`)
+
+
+### Exemplos
+
+#### Configuração de Interfaces de Rede 
+
+#### Listar Interfaces de Rede
+
+```bash
+$ ip link show
+ ```
+Exibe todas as interfaces de rede disponíveis no sistema.
+
+#### Ativar/Desativar uma Interface
+
+**Ativar uma interface:**
+```bash
+sudo ip link set dev <interface> up
+``` 
+    
+**Desativar uma interface:**
+```bash
+sudo ip link set dev <interface> down
+``` 
+```bash
+ip addr show
+``` 
+Exibe os endereços IP configurados em todas as interfaces.
+
+```bash
+sudo ip addr add <endereço_ip>/<máscara> dev <interface>
+``` 
+```bash
+sudo ip addr add 192.168.1.10/24 dev eth0
+``` 
+```bash
+sudo ip addr del <endereço_ip>/<máscara> dev <interface>
+``` 
+```bash
+sudo ip addr del 192.168.1.10/24 dev eth0
+``` 
+```bash
+ip route show
+``` 
+Exibe a tabela de roteamento atual.
+
+```bash
+sudo ip route add <rede>/<máscara> via <gateway>]
+``` 
+```bash
+sudo ip route add 192.168.2.0/24 via 192.168.1.1
+``` 
+```bash
+sudo ip route del <rede>/<máscara>
+``` 
+```bash
+sudo ip route del 192.168.2.0/24
+```

@@ -13,7 +13,7 @@
 7. [Gerenciamento de pacotes](#pacotes) 
 8. [Editar arquivos com vim](#vim) 
 9. [Agendamento de tarefas com cron](#cron) 
-10. [Fumanentos básicos de redes com Linux](#redes) 
+10. [Fundamentos básicos de redes com Linux](#redes) 
 11. [Logs e monitoramento básico](#monitoring)
 
 
@@ -909,9 +909,54 @@ Agora, a tarefa de backup será executada automaticamente todos os dias às 2h00
 
 ## Fundamentos Básicos de Redes com Debian e CentOS - Aula 10
 
-**Redes de Computadores** permitem a comunicação entre diferentes dispositivos para compartilhar recursos e informações. No contexto do Linux, distribuições como Debian e CentOS são comumente utilizadas em servidores e dispositivos de rede devido à sua estabilidade e suporte robusto.
+### Redes de Computadores
 
-#### Modelo OSI e TCP/IP
+Permitem a comunicação entre diferentes dispositivos para compartilhar recursos e informações. No contexto do Linux, distribuições como Debian e CentOS são comumente utilizadas em servidores e dispositivos de rede devido à sua estabilidade e suporte robusto.
+
+### Principais tipos de redes de computadores
+
+**LAN (Local Area Network)**:
+    
+-   **Definição**: Uma rede local que abrange uma área geográfica pequena, como um escritório, uma casa ou um prédio.
+-   **Características**:
+	-   Conexão de alta velocidade.
+	-   Compartilhamento de recursos (impressoras, arquivos, etc.).
+     -   Topologia geralmente em estrela ou barramento.
+
+**WAN (Wide Area Network)**:
+    
+-   **Definição**: Uma rede que abrange uma grande área geográfica, como um país ou continente.
+-   **Características**:
+       -   Usa serviços de operadoras (como linhas telefônicas, fibra óptica ou satélites).
+        -   Baixa velocidade em comparação com LANs.
+        -   Exemplos: Internet, redes corporativas interconectadas.
+
+
+### Endereçamento IP (IPv4 e IPv6).
+
+**IPv4 (Internet Protocol versão 4)**:
+    
+-   **Formato**: O IPv4 usa um endereço de  **32 bits**  no formato decimal com pontos (por exemplo, 192.168.1.1).
+-   **Espaço de Endereçamento**: Oferece cerca de  **4,3 bilhões**  de endereços únicos.
+
+-   **Características**:
+       -   **Sem conexão**: Não garante a entrega dos dados nem a qualidade do serviço.
+        -   **Roteamento**: Pode enviar pacotes por caminhos alternativos em caso de congestão ou falhas.
+        -   **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
+
+**IPv6 (Internet Protocol versão 6)**:
+    
+-   **Formato**: Usa um endereço de  **128 bits**  no formato hexadecimal (por exemplo, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+-   **Espaço de Endereçamento**: Oferece  **1,028 vezes mais**  endereços que o IPv4.
+-   **Características**:
+    -   **Conexão**: Garante a entrega dos dados.
+    -   **Segurança**: Incorpora recursos de segurança.
+    -   **Futuro**: Solução para o esgotamento de endereços.
+
+
+
+### Modelo OSI e TCP/IP
 
 **Modelo OSI (Open Systems Interconnection)** é uma referência conceptual para a compreensão das comunicações em rede. Ele define sete camadas que descrevem como dados são transmitidos de um dispositivo para outro em uma rede. As camadas são:
 
@@ -941,7 +986,80 @@ Agora, a tarefa de backup será executada automaticamente todos os dias às 2h00
 Para saber mais sobre TCP/IP acesse: https://www.cisco.com/c/pt_br/support/docs/ip/routing-information-protocol-rip/13769-5.html
 
 
-#### Simples configuração de rede no Debian e CentOS
+### DHCP (Dynamic Host Configuration Protocol)
+
+#### O que é DHCP?
+
+O Dynamic Host Configuration Protocol (DHCP) é um protocolo de rede utilizado para automatizar o processo de configuração de dispositivos em redes IP. Ele permite que os dispositivos recebam automaticamente um endereço IP e outras informações de configuração de rede necessárias, como máscara de sub-rede, gateway padrão e servidores DNS. O DHCP é essencial para simplificar a administração de redes, especialmente em ambientes grandes, onde a configuração manual de endereços IP para cada dispositivo seria impraticável.
+
+<img src="https://www.iplocation.net/assets/images/blog/featured/dhcp.jpg" alt="DHCP"/>
+
+### Como Funciona o DHCP?
+
+#### **Descoberta (Discover)**
+Quando um dispositivo (cliente DHCP) é conectado à rede e precisa de um endereço IP, ele envia uma mensagem de descoberta (DHCP Discover) na rede local. Esta mensagem é um broadcast que todos os servidores DHCP na rede local podem receber.
+
+#### **Oferta (Offer)**
+Ao receber a mensagem de descoberta, os servidores DHCP respondem com uma mensagem de oferta (DHCP Offer). Esta mensagem contém um endereço IP disponível e outras informações de configuração que o servidor está disposto a fornecer ao cliente.
+
+#### **Solicitação (Request)**
+O cliente DHCP escolhe uma das ofertas recebidas (geralmente a primeira) e responde com uma mensagem de solicitação (DHCP Request), indicando ao servidor que aceita a oferta e deseja usar as informações de configuração fornecidas.
+
+#### **Confirmação (Ack)**
+Finalmente, o servidor DHCP responde com uma mensagem de confirmação (DHCP Acknowledgment ou DHCP Ack), confirmando que o cliente pode usar o endereço IP e fornecendo qualquer outra informação necessária para a configuração da rede. Neste ponto, o cliente configura sua interface de rede com as informações recebidas e pode começar a comunicar-se na rede.
+
+<img src="https://selectel.ru/blog/wp-content/uploads/2020/12/PR-14856_1.png" alt="DHCP"/>
+
+### Benefícios do DHCP
+
+#### **Automatização**
+O DHCP automatiza a configuração de endereços IP e outros parâmetros de rede, reduzindo a carga administrativa e a possibilidade de erros de configuração manual.
+
+#### **Escalabilidade**
+Em redes grandes, o DHCP permite que novos dispositivos sejam adicionados e configurados rapidamente, sem a necessidade de intervenção manual.
+
+#### **Gerenciamento Centralizado**
+Os administradores de rede podem gerenciar centralmente todas as configurações de rede, incluindo reservas de endereços IP estáticos e parâmetros de configuração específicos para determinados dispositivos.
+
+#### **Eficiência**
+O DHCP reutiliza endereços IP, liberando automaticamente os endereços que não estão mais em uso e alocando-os para novos dispositivos, o que maximiza a eficiência do uso dos endereços IP disponíveis.
+
+### Componentes do DHCP
+
+#### **Servidor DHCP**
+O servidor DHCP é responsável por responder às solicitações dos clientes DHCP e fornecer informações de configuração de rede. Ele mantém um pool de endereços IP disponíveis e outras informações de configuração para a rede.
+
+####  **Cliente DHCP**
+O cliente DHCP é o dispositivo que solicita um endereço IP e informações de configuração de rede do servidor DHCP. Dispositivos como computadores, smartphones, impressoras e outros equipamentos de rede podem atuar como clientes DHCP.
+
+#### **Agente de Revezamento DHCP (DHCP Relay Agent)**
+Em redes segmentadas por roteadores, um agente de revezamento DHCP pode ser usado para encaminhar mensagens DHCP entre clientes e servidores que estão em sub-redes diferentes. Isso permite que um servidor DHCP centralizado forneça serviços a múltiplas sub-redes.
+
+### Mensagens DHCP
+
+#### **DHCP Discover**
+Mensagem enviada pelo cliente para descobrir servidores DHCP disponíveis.
+
+#### **DHCP Offer**
+Mensagem enviada pelo servidor DHCP em resposta à mensagem Discover, oferecendo um endereço IP ao cliente.
+
+#### **DHCP Request**
+Mensagem enviada pelo cliente aceitando a oferta do servidor DHCP.
+
+#### **DHCP Acknowledgment (Ack)**
+Mensagem enviada pelo servidor confirmando que o cliente pode usar o endereço IP oferecido.
+
+#### **DHCP Nak**
+Mensagem enviada pelo servidor informando que a solicitação do cliente foi negada.
+
+#### **DHCP Release**
+Mensagem enviada pelo cliente ao servidor para liberar o endereço IP que estava em uso.
+
+<img src="https://crnetpackets.com/wp-content/uploads/2017/04/dhcp-basics-initial2.png?w=780&h=434" alt="DHCP"/>
+
+> O DHCP é um protocolo fundamental para a administração eficiente de redes modernas. Ele automatiza a configuração de endereços IP e outros parâmetros de rede, simplificando o gerenciamento de grandes volumes de dispositivos e garantindo que as redes operem de maneira eficiente e sem conflitos de endereços IP.
+
+### Simples configuração de rede no Debian e CentOS
 
 #### Debian
 
