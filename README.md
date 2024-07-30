@@ -917,19 +917,21 @@ Permitem a comunicação entre diferentes dispositivos para compartilhar recurso
 
 **LAN (Local Area Network)**:
     
--   **Definição**: Uma rede local que abrange uma área geográfica pequena, como um escritório, uma casa ou um prédio.
+Uma rede local que abrange uma área geográfica pequena, como um escritório, uma casa ou um prédio.
+
 -   **Características**:
 	-   Conexão de alta velocidade.
 	-   Compartilhamento de recursos (impressoras, arquivos, etc.).
-     -   Topologia geralmente em estrela ou barramento.
+    -   Topologia geralmente em estrela ou barramento.
 
 **WAN (Wide Area Network)**:
     
--   **Definição**: Uma rede que abrange uma grande área geográfica, como um país ou continente.
+Uma rede que abrange uma grande área geográfica, como um país ou continente.
+
 -   **Características**:
        -   Usa serviços de operadoras (como linhas telefônicas, fibra óptica ou satélites).
-        -   Baixa velocidade em comparação com LANs.
-        -   Exemplos: Internet, redes corporativas interconectadas.
+      -   Baixa velocidade em comparação com LANs.
+      -   Exemplos: Internet, redes corporativas interconectadas.
 
 
 ### Endereçamento IP (IPv4 e IPv6).
@@ -938,17 +940,20 @@ Permitem a comunicação entre diferentes dispositivos para compartilhar recurso
     
 -   **Formato**: Um endereço IPv4 é representado por um número de 32 bits, que é dividido em quatro octetos (ou bytes). Cada octeto é composto por 8 bits, e cada um dos quatro octetos é representado em decimal separado por pontos. Portanto, um endereço IPv4 tem o seguinte formato: **192.168.1.1**).
 > Onde cada conjunto separado por `.` é um número decimal entre 0 e 255, que representa um octeto.
+> 
 > Esses 32 bits são divididos em quatro octetos (bytes), cada um contendo 8 bits.
+> 
 > Cada octeto é convertido em um número decimal entre 0 e 255.
 
 -   **Espaço de Endereçamento**: Oferece cerca de  **4,3 bilhões**  de endereços únicos.
 
 -   **Características**:
+
        -   **Sem conexão**: Não garante a entrega dos dados nem a qualidade do serviço.
-       
+        
         -   **Roteamento**: Pode enviar pacotes por caminhos alternativos em caso de congestão ou falhas.
 
-        -   **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
+		-   **Limitações**: O esgotamento de endereços é um problema devido à alta demanda.
 
 **IPv6 (Internet Protocol versão 6)**:
     
