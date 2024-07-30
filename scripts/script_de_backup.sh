@@ -7,7 +7,7 @@ DATE=$(date +%Y-%m-%d-%s)
 BACKUP_FILE="backup-$DATE.tar.gz"
 
 # Criar um backup
-tar -zczf $DEST_DIR/$BACKUP_FILE $SOURCE_DIR
+tar -zczf $DEST_DIR/$BACKUP_FILE $MY_DIR
 
 # Saida de Logs
 echo "Backup criado com sucesso: $BACKUP_FILE"
